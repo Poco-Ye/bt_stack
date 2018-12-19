@@ -1,0 +1,32 @@
+set BT_COMM=true
+
+###NOT DEFINE 
+set A2DP=false
+set AVDTP=false
+set AVRCP=false 
+set BNEP=false
+set GOEP=false 
+set HFP=false 
+set HID=false 
+set HSP=false 
+set OBEX=false 
+set PAN=false 
+set PBAP=false 
+
+#DEFINE
+set BLUEDROID 
+set RFCOMM 
+set SDP_CLIENT 
+set SDP_SERVER 
+
+set SDP_BLE
+
+#NOT DEFINE 
+set GATT_BATTERY 
+set GATT_HID 
+
+#DEFINE
+set GATT_DEVICE_INFO 
+
+#DEFINE
+set THIRD_PARTY 

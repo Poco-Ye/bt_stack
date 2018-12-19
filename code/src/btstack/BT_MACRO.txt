@@ -1,0 +1,24 @@
+set BT_COMM=true
+set BLUEDROID=true 
+set RFCOMM=true 
+set SDP_CLIENT=true 
+set SDP_SERVER=true 
+set SDP_BLE=true
+set GATT_DEVICE_INFO=true 
+set THIRD_PARTY=true 
+ 
+set A2DP=false
+set AVDTP=false
+set AVRCP=false 
+set BNEP=false
+set GOEP=false 
+set HFP=false 
+set HID=false 
+set HSP=false 
+set OBEX=false 
+set PAN=false 
+set PBAP=false 
+set GATT_BATTERY=false  
+set GATT_HID=false 
+
+

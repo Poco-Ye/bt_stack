@@ -1,0 +1,40 @@
+#include "hal_tick.h"
+
+static void dummy_handler(void){};
+
+static void (*tick_handler)(void) = &dummy_handler;
+
+void hal_tick_init(void){
+
+}
+
+void hal_tick_set_handler(void (*handler)(void)){
+    if (handler == NULL){
+        tick_handler = &dummy_handler;
+        return;
+    }
+    tick_handler = handler;
+}
+
+int  hal_tick_get_tick_period_in_ms(void){
+    return 250;
+}
+
+#if 0 //shics
+// Timer A1 interrupt service routine
+#ifdef __GNUC__
+__attribute__((interrupt(TIMER1_A0_VECTOR)))
+#endif
+#ifdef __IAR_SYSTEMS_ICC__
+#pragma vector=TIMER1_A0_VECTOR
+__interrupt
+#endif
+#endif
+
+void timerA0ISR(void){
+    //TA1CCR0 += TIMER_COUNTDOWN;
+    (*tick_handler)();
+    
+    // force exit low power mode
+    //__bic_SR_register_on_exit(LPM0_bits);   // Exit active CPU
+}

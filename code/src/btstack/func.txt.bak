@@ -1,0 +1,206 @@
+set BT_COMM=true
+set BLUEDROID=true 
+set RFCOMM=true 
+set SDP_CLIENT=true 
+set SDP_SERVER=true 
+set SDP_BLE=true
+set GATT_DEVICE_INFO=true 
+set THIRD_PARTY=true 
+set EMBEDDED_OS=true
+set CHIPSET_BCM=true
+set KEY_DB=true
+set TEST_CASE=true
+
+set A2DP=false
+set AVDTP=false
+set AVRCP=false 
+set BNEP=false
+set GOEP=false 
+set HFP=false 
+set HID=false 
+set HSP=false 
+set OBEX=false 
+set PAN=false 
+set PBAP=false 
+set GATT_BATTERY=false  
+set GATT_HID=false 
+
+
+ifeq ($(BT_COMM), true)  # BT COMM
+C_OBJECTS += ad_parser.o btstack_hid_parser.o btstack_linked_list.o btstack_memory.o btstack_memory_pool.o btstack_ring_buffer.o 
+C_OBJECTS += btstack_run_loop.o btstack_slip.o btstack_tlv.o btstack_util.o hci.o hci_cmd.o hci_dump.o hci_transport_em9304_spi.o
+C_OBJECTS += hci_transport_h4.o hci_transport_h5.o l2cap.o l2cap_signaling.o
+endif
+
+ifeq ($(BLUEDROID), true)   # CLASSIC
+C_OBJECTS += btstack_cvsd_plc.o 
+C_OBJECTS += btstack_link_key_db_memory.o btstack_link_key_db_static.o btstack_link_key_db_tlv.o 
+C_OBJECTS += btstack_sbc_decoder_bluedroid.o btstack_sbc_encoder_bluedroid.o btstack_sbc_plc.o device_id_server.o 
+endif
+
+ifeq ($(RFCOMM), true)  # CLASSIC
+C_OBJECTS += rfcomm.o 
+endif
+
+ifeq ($(SDP_CLIENT), true)   # CLASSIC
+C_OBJECTS += sdp_client.o sdp_client_rfcomm.o
+endif
+
+ifeq ($(SDP_SERVER), true)  # CLASSIC
+C_OBJECTS += sdp_server.o sdp_util.o spp_server.o
+endif
+
+ifeq ($(SDP_BLE), true)  # BLE
+C_OBJECTS += ancs_client.o att_db.o att_db_util.o att_dispatch.o att_server.o gatt_client.o le_device_db_memory.o le_device_db_tlv.o sm.o
+endif
+
+ifeq ($(GATT_DEVICE_INFO),true)  # GATT
+C_OBJECTS += device_information_service_server.o 
+endif
+
+ifeq ($(THIRD_PARTY),true)  #THIRD LIB
+C_OBJECTS += sbc_analysis.o sbc_enc_bit_alloc_mono.o sbc_encoder.o sbc_dct.o sbc_enc_bit_alloc_ste.o sbc_packing.o sbc_dct_coeffs.o sbc_enc_coeffs.o
+C_OBJECTS += alloc.o bitalloc.o bitalloc-sbc.o bitstream-decode.o decoder-oina.o decoder-private.o decoder-sbc.o dequant.o framing.o framing-sbc.o oi_codec_version.o synthesis-8-generated.o synthesis-dct8.o synthesis-sbc.o
+endif
+
+ifeq ($(EMBEDDED_OS),true)  #EMBEDDED OS
+C_OBJECTS += btstack_run_loop_embedded.o hal_tick.o hal_cpu.o btstack_uart_block_embedded.o bcm5892_hal_uart.o
+endif
+
+ifeq ($(CHIPSET_BCM),true)  #CHIPSET_BCM
+C_OBJECTS += btstack_chipset_bcm.o btstack_chipset_bcm_download_firmware.o
+endif
+
+ifeq ($(KEY_DB),true)  #KEY_DB
+C_OBJECTS += btstack_link_key_db_fs.o
+endif
+
+ifeq ($(TEST_CASE),true)  #TEST_CASE
+C_OBJECTS += test_main.o classic_test.o
+endif
+
+####-----------------NOT COMPILE BEGIN
+ifeq ($(A2DP),true)  # CLASSIC
+C_OBJECTS += a2dp_sink.o a2dp_source.o 
+endif
+
+ifeq ($(AVDTP),true)  # CLASSIC
+C_OBJECTS += avdtp_acceptor.o avdtp.o avdtp_initiator.o avdtp_sink.o avdtp_source.o avdtp_util.o 
+endif
+
+ifeq ($(AVRCP),true)  # CLASSIC
+C_OBJECTS += avrcp_browsing_controller.o avrcp.o avrcp_controller.o avrcp_media_item_iterator.o avrcp_target.o 
+endif
+
+ifeq ($(BNEP),true)   # CLASSIC
+C_OBJECTS += bnep.o 
+endif
+
+ifeq ($(GOEP),true)   # CLASSIC
+C_OBJECTS += goep_client.o 
+endif
+
+ifeq ($(HFP),true)  # CLASSIC
+C_OBJECTS += hfp_ag.o hfp.o hfp_gsm_model.o hfp_hf.o hfp_msbc.o 
+endif
+
+ifeq ($(HID),true)   # CLASSIC
+C_OBJECTS += hid_device.o 
+endif
+
+ifeq ($(HSP),true)  # CLASSIC
+C_OBJECTS += hsp_ag.o hsp_hs.o 
+endif
+
+ifeq ($(OBEX),true)  # CLASSIC
+C_OBJECTS += obex_iterator.o 
+endif
+
+ifeq ($(PAN),true)  # CLASSIC
+C_OBJECTS += pan.o 
+endif
+
+ifeq ($(PBAP),true)  # CLASSIC
+C_OBJECTS += pbap_client.o
+endif
+
+ifeq ($(GATT_BATTERY),true)  # GATT
+C_OBJECTS += battery_service_server.o 
+endif
+
+ifeq ($(GATT_HID),true)  # GATT
+C_OBJECTS += hids_device.o
+endif
+
+####-----------------NOT COMPILE END
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ifdef BT_COMM
+C_OBJECTS += ad_parser.o btstack_hid_parser.o btstack_linked_list.o btstack_memory.o btstack_memory_pool.o btstack_ring_buffer.o 
+C_OBJECTS += btstack_run_loop.o btstack_slip.o btstack_tlv.o btstack_util.o hci.o hci_cmd.o hci_dump.o hci_transport_em9304_spi.o
+C_OBJECTS += hci_transport_h4.o hci_transport_h5.o l2cap.o l2cap_signaling.o
+endif
+
+ifdef BLUEDROID   # CLASSIC
+C_OBJECTS += btstack_cvsd_plc.o 
+C_OBJECTS += btstack_link_key_db_memory.o btstack_link_key_db_static.o btstack_link_key_db_tlv.o 
+C_OBJECTS += btstack_sbc_decoder_bluedroid.o btstack_sbc_encoder_bluedroid.o btstack_sbc_plc.o device_id_server.o 
+endif
+
+ifdef RFCOMM  # CLASSIC
+C_OBJECTS += rfcomm.o 
+endif
+
+ifdef SDP_CLIENT    # CLASSIC
+C_OBJECTS += sdp_client.o sdp_client_rfcomm.o
+endif
+
+ifdef SDP_SERVER  # CLASSIC
+C_OBJECTS += sdp_server.o sdp_util.o spp_server.o
+endif
+
+ifdef SDP_BLE   # BLE
+C_OBJECTS += ancs_client.o att_db.o att_db_util.o att_dispatch.o att_server.o gatt_client.o le_device_db_memory.o le_device_db_tlv.o sm.o
+endif
+
+ifdef GATT_DEVICE_INFO   # GATT
+C_OBJECTS += device_information_service_server.o 
+endif
+
+ifdef THIRD_PARTY   #THIRD LIB
+C_OBJECTS += sbc_analysis.o sbc_enc_bit_alloc_mono.o sbc_encoder.o sbc_dct.o sbc_enc_bit_alloc_ste.o sbc_packing.o sbc_dct_coeffs.o sbc_enc_coeffs.o
+C_OBJECTS += alloc.o bitalloc.o bitalloc-sbc.o bitstream-decode.o decoder-oina.o decoder-private.o decoder-sbc.o dequant.o framing.o framing-sbc.o oi_codec_version.o synthesis-8-generated.o synthesis-dct8.o synthesis-sbc.o
+endif
+
+ifdef EMBEDDED_OS  #EMBEDDED OS
+C_OBJECTS += btstack_run_loop_embedded.o hal_tick.o hal_cpu.o btstack_uart_block_embedded.o bcm5892_hal_uart.o
+endif
+
+ifdef CHIPSET_BCM  #CHIPSET_BCM
+C_OBJECTS += btstack_chipset_bcm.o btstack_chipset_bcm_download_firmware.o
+endif
+
+ifdef KEY_DB   #KEY_DB
+C_OBJECTS += btstack_link_key_db_fs.o
+endif
+
+ifeq ($(TEST_CASE),true)  #TEST_CASE
+C_OBJECTS += test_main.o classic_test.o
+endif
+
+
+

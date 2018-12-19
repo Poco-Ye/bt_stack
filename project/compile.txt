@@ -1,0 +1,318 @@
+
+E:\SourceCode\Sxxx\source\SxxxMonitor_Sec\project>set COMPILER_TOOLKIT=GCC 
+
+E:\SourceCode\Sxxx\source\SxxxMonitor_Sec\project>set GCC_BIN_PATH=C:\Progra~1\GNUARM.410\arm-elf\bin 
+
+E:\SourceCode\Sxxx\source\SxxxMonitor_Sec\project>set GCC_INC_PATH=C:\Progra~1\GNUARM.410\arm-elf\include -I C:\Progra~1\GNUARM.410\lib\gcc\arm-elf\4.1.0\include 
+
+E:\SourceCode\Sxxx\source\SxxxMonitor_Sec\project>set GCC_LIB_PATH=C:\Progra~1\GNUARM.410\arm-elf\lib -L C:\Progra~1\GNUARM.410\lib\gcc\arm-elf\4.1.0 
+
+E:\SourceCode\Sxxx\source\SxxxMonitor_Sec\project>set PATH=c:\make381;C:\Program Files\GNUARM.410\bin;C:\Program Files\GNUARM.410\arm-elf\bin;C:\Program Files\GNUARM.410\libexec\gcc\arm-elf\4.1.0 
+
+E:\SourceCode\Sxxx\source\SxxxMonitor_Sec\project>set MONITOR_VERSION=3.35 
+
+E:\SourceCode\Sxxx\source\SxxxMonitor_Sec\project>del ..\code\inc\version.h 
+
+E:\SourceCode\Sxxx\source\SxxxMonitor_Sec\project>echo #ifndef _VERSION_H_ 1>>..\code\inc\version.h 
+
+E:\SourceCode\Sxxx\source\SxxxMonitor_Sec\project>echo #define _VERSION_H_ 1>>..\code\inc\version.h 
+
+E:\SourceCode\Sxxx\source\SxxxMonitor_Sec\project>echo #define MONI_VERSION "3.35" 1>>..\code\inc\version.h 
+
+E:\SourceCode\Sxxx\source\SxxxMonitor_Sec\project>echo #endif 1>>..\code\inc\version.h 
+
+E:\SourceCode\Sxxx\source\SxxxMonitor_Sec\project>set BT_COMM=true 
+
+E:\SourceCode\Sxxx\source\SxxxMonitor_Sec\project>set BLUEDROID=true  
+
+E:\SourceCode\Sxxx\source\SxxxMonitor_Sec\project>set RFCOMM=true  
+
+E:\SourceCode\Sxxx\source\SxxxMonitor_Sec\project>set SDP_CLIENT=true  
+
+E:\SourceCode\Sxxx\source\SxxxMonitor_Sec\project>set SDP_SERVER=true  
+
+E:\SourceCode\Sxxx\source\SxxxMonitor_Sec\project>set SDP_BLE=true 
+
+E:\SourceCode\Sxxx\source\SxxxMonitor_Sec\project>set GATT_DEVICE_INFO=true  
+
+E:\SourceCode\Sxxx\source\SxxxMonitor_Sec\project>set THIRD_PARTY=true  
+
+E:\SourceCode\Sxxx\source\SxxxMonitor_Sec\project>set EMBEDDED_OS=true 
+
+E:\SourceCode\Sxxx\source\SxxxMonitor_Sec\project>set CHIPSET_BCM=true 
+
+E:\SourceCode\Sxxx\source\SxxxMonitor_Sec\project>set KEY_DB=true 
+
+E:\SourceCode\Sxxx\source\SxxxMonitor_Sec\project>set TEST_CASE=true 
+
+E:\SourceCode\Sxxx\source\SxxxMonitor_Sec\project>set A2DP=false 
+
+E:\SourceCode\Sxxx\source\SxxxMonitor_Sec\project>set AVDTP=false 
+
+E:\SourceCode\Sxxx\source\SxxxMonitor_Sec\project>set AVRCP=false  
+
+E:\SourceCode\Sxxx\source\SxxxMonitor_Sec\project>set BNEP=false 
+
+E:\SourceCode\Sxxx\source\SxxxMonitor_Sec\project>set GOEP=false  
+
+E:\SourceCode\Sxxx\source\SxxxMonitor_Sec\project>set HFP=false  
+
+E:\SourceCode\Sxxx\source\SxxxMonitor_Sec\project>set HID=false  
+
+E:\SourceCode\Sxxx\source\SxxxMonitor_Sec\project>set HSP=false  
+
+E:\SourceCode\Sxxx\source\SxxxMonitor_Sec\project>set OBEX=false  
+
+E:\SourceCode\Sxxx\source\SxxxMonitor_Sec\project>set PAN=false  
+
+E:\SourceCode\Sxxx\source\SxxxMonitor_Sec\project>set PBAP=false  
+
+E:\SourceCode\Sxxx\source\SxxxMonitor_Sec\project>set GATT_BATTERY=false   
+
+E:\SourceCode\Sxxx\source\SxxxMonitor_Sec\project>set GATT_HID=false  
+
+E:\SourceCode\Sxxx\source\SxxxMonitor_Sec\project>del obj\rtm.o obj\dtd.o 
+
+E:\SourceCode\Sxxx\source\SxxxMonitor_Sec\project>set TARGET=SxxxMonitor_Debug 
+
+E:\SourceCode\Sxxx\source\SxxxMonitor_Sec\project>set aFile=SxxxMonitor_Debug_20180408(v3.35).bin 
+
+E:\SourceCode\Sxxx\source\SxxxMonitor_Sec\project>make -s clean all 
+CC ../code/src/intr/init.S
+CC ../code/src/multitask/paxos.c
+CC ../code/src/multitask/osmem.c
+CC ../code/src/multitask/scheduletimer.c
+CC ../code/src/system/mpatch.c
+CC ../code/src/intr/base.c
+CC ../code/src/system/system.c
+CC ../code/src/intr/swi.c
+CC ../code/src/comm/comm.c
+CC ../code/src/system/timer.c
+CC ../code/src/system/io_manager.c
+CC ../code/src/system/so_manage.c
+CC ../code/src/system/export_symbol.c
+CC ../code/src/system/main.c
+CC ../code/src/kb/kb.c
+CC ../code/src/kb/kb_touch.c
+CC ../code/src/kb/kbi2c.c
+CC ../code/src/kb/beep.c
+CC ../code/src/system/adc.c
+CC ../code/src/DLL/dll.c
+CC ../code/src/system/SysPara.c
+CC ../code/src/DLL/sys_combin_api.c
+CC ../code/src/SecRam/bcm5892-bbl.c
+CC ../code/src/system/bcm5892-spi.c
+CC ../code/src/SecRam/rtc.c
+CC ../code/src/file/filedef.c
+CC ../code/src/file/filecore.c
+CC ../code/src/file/filepublic.c
+CC ../code/src/system/menu.c
+CC ../code/src/ModuleCheck/modulecheck.c
+CC ../code/src/ModuleCheck/ModuleMenu.c
+CC ../code/src/Flash/nand.c
+CC ../code/src/Flash/umc_cpuapi.c
+CC ../code/src/Flash/sha1.c
+CC ../code/src/Flash/badblock.c
+CC ../code/src/Font/Asc.c
+CC ../code/src/Font/font.c
+CC ../code/src/lcd/LcdDrv.c
+CC ../code/src/lcd/LcdApi.c
+CC ../code/src/lcd/LcdKd.c
+CC ../code/src/lcd/clcdapi.c
+CC ../code/src/lcd/clcdkd.c
+CC ../code/src/lcd/clcddrv.c
+CC ../code/src/encrypt/des.c
+CC ../code/src/encrypt/digit.c
+CC ../code/src/encrypt/r_stdlib.c
+CC ../code/src/encrypt/r_random.c
+CC ../code/src/encrypt/nn.c
+CC ../code/src/encrypt/md5c.c
+CC ../code/src/encrypt/CRC.c
+CC ../code/src/encrypt/rsa.c
+CC ../code/src/encrypt/HASH.c
+CC ../code/src/encrypt/sha256.c
+CC ../code/src/encrypt/bignum.c
+CC ../code/src/encrypt/xy_rsa.c
+CC ../code/src/encrypt/aes.c
+CC ../code/src/PUK/puk.c
+CC ../code/src/MagCard/magcard.c
+CC ../code/src/MagCard/enmagrd.c
+CC ../code/src/AppManage/AppManage.c
+CC ../code/src/download/download.c
+CC ../code/src/Decompress/decompress.c
+CC ../code/src/download/duplicate.c
+CC ../code/src/download/uartdownload.c
+CC ../code/src/download/UsbHostDL.c
+CC ../code/src/modem/modem.c
+CC ../code/src/printer/printer.c
+CC ../code/src/printer/printer_hal_sii.c
+CC ../code/src/printer/printer_hal_prt.c
+CC ../code/src/printer/stylus/printer_stylus.c
+CC ../code/src/printer/stylus/printerApi_stylus.c
+CC ../code/src/printer/stylus/printer_stylus_bcm5892.c
+CC ../code/src/wnet/WlApi.c
+CC ../code/src/eth/bcm5892_eth.c
+CC ../code/src/fat/fat.c
+CC ../code/src/fat/fcach.c
+CC ../code/src/usb/usb_ftdi.c
+CC ../code/src/usb/usbbulk.c
+CC ../code/src/usb/usbdev.c
+CC ../code/src/usb/usbhost.c
+CC ../code/src/usb/usb_ohci.c
+CC ../code/src/usb/usbbulk_ohci.c
+CC ../code/src/usb/usbhcd.c
+CC ../code/src/sdcard/sdhci.c
+CC ../code/src/sdcard/mmc.c
+CC ../code/src/CfgManage/CfgLowlevel.c
+CC ../code/src/CfgManage/CfgManage.c
+CC ../code/src/iccard/hardware/icc_hard_async.c
+CC ../code/src/iccard/hardware/icc_hard_sync.c
+CC ../code/src/iccard/hardware/icc_queue.c
+CC ../code/src/iccard/hardware/tda8026.c
+CC ../code/src/iccard/hardware/ncn8025.c
+CC ../code/src/iccard/hardware/icc_device_configure.c
+CC ../code/src/iccard/protocol/icc_apis.c
+CC ../code/src/iccard/protocol/icc_core.c
+CC ../code/src/Mifre/driver/rfbsp/bcm5892_rfbsp.c
+CC ../code/src/Mifre/driver/rc663/rc663_driver.c
+CC ../code/src/Mifre/driver/rc663/rc663_regs_conf.c
+CC ../code/src/Mifre/driver/pn512/pn512_driver.c
+CC ../code/src/Mifre/driver/pn512/pn512_regs_conf.c
+CC ../code/src/Mifre/driver/as3911/as3911_driver.c
+CC ../code/src/Mifre/driver/as3911/as3911_regs_conf.c
+CC ../code/src/Mifre/driver/as3911/mifare_encrypt.c
+CC ../code/src/Mifre/protocol/iso14443hw_hal.c
+CC ../code/src/Mifre/protocol/iso14443_3a.c
+CC ../code/src/Mifre/protocol/iso14443_3b.c
+CC ../code/src/Mifre/protocol/iso14443_4.c
+CC ../code/src/Mifre/protocol/mifare.c
+CC ../code/src/Mifre/protocol/emvcl.c
+CC ../code/src/Mifre/protocol/paxcl.c
+CC ../code/src/Mifre/protocol/paypass.c
+CC ../code/src/Mifre/protocol/pcd_apis.c
+CC ../code/src/PowerManage/dmu_cpuapi.c
+CC ../code/src/PowerManage/PowerManage.c
+CC ../code/src/PowerManage/battery.c
+CC ../code/src/ipstack/eth_dev/bcm5892_phy.c
+CC ../code/src/ipstack/ppp/gprs_ppp.c
+CC ../code/src/ipstack/ppp/modem_ppp.c
+CC ../code/src/ipstack/ppp/ppp.c
+CC ../code/src/ipstack/ppp/pppoe.c
+CC ../code/src/ipstack/ppp/mschap.c
+CC ../code/src/ipstack/ppp/ppp_md5.c
+CC ../code/src/ipstack/ppp/cbc_enc.c
+CC ../code/src/ipstack/ppp/des_enc.c
+CC ../code/src/ipstack/ppp/ecb_enc.c
+CC ../code/src/ipstack/ppp/md4.c
+CC ../code/src/ipstack/ppp/sha1dgst.c
+CC ../code/src/ipstack/ppp/set_key.c
+CC ../code/src/ipstack/core/dev.c
+CC ../code/src/ipstack/core/inet.c
+CC ../code/src/ipstack/core/ip_addr.c
+CC ../code/src/ipstack/core/ip_ver.c
+CC ../code/src/ipstack/core/mem_pool.c
+CC ../code/src/ipstack/core/netapi.c
+CC ../code/src/ipstack/core/skbuff.c
+CC ../code/src/ipstack/core/socket.c
+CC ../code/src/ipstack/core/inet_timer.c
+CC ../code/src/ipstack/ipv4/ethernet.c
+CC ../code/src/ipstack/ipv4/ip.c
+CC ../code/src/ipstack/ipv4/arp.c
+CC ../code/src/ipstack/ipv4/icmp.c
+CC ../code/src/ipstack/ipv4/tcp.c
+CC ../code/src/ipstack/ipv4/tcp_in.c
+CC ../code/src/ipstack/ipv4/tcp_out.c
+CC ../code/src/ipstack/ipv4/udp.c
+CC ../code/src/ipstack/ipv4/dns.c
+CC ../code/src/ipstack/ipv4/dhcpc.c
+CC ../code/src/proxy/base_common.c
+CC ../code/src/proxy/handset.c
+CC ../code/src/proxy/comm/base_comm_proxy.c
+CC ../code/src/proxy/ip/base_lan_api.c
+CC ../code/src/proxy/modem/base_modem_proxy.c
+CC ../code/src/proxy/ohci/ohci_host_proxy.c
+CC ../code/src/tiltsensor/i2c.c
+CC ../code/src/tiltsensor/tiltsensor.c
+CC ../code/src/audio/bcm5892_i2s.c
+CC ../code/src/audio/audio.c
+CC ../code/src/audio/queue.c
+CC ../code/src/TouchScreen/tsc2046.c
+CC ../code/src/TouchScreen/ts_hal.c
+CC ../code/src/TouchScreen/ts_sample.c
+CC ../code/src/TouchScreen/button.c
+CC ../code/src/icon/icon.c
+CC ../code/src/barcode/barcode.c
+CC ../code/src/wifi/apis/wlanapp.c
+CC ../code/src/wifi/rpwifi/rpwifi.c
+CC ../code/src/wifi/rpwifi/rpwlanapp.c
+CC ../code/src/wifi/ap6181/ap6181.c
+CC ../code/src/wifi/ap6181/bcm5892-sdio.c
+CC ../code/src/wifi/ap6181/bcmsdio/bcmsdh.c
+CC ../code/src/wifi/ap6181/bcmsdio/dhd_common.c
+CC ../code/src/wifi/ap6181/bcmsdio/dhd_osl_ext.c
+CC ../code/src/wifi/ap6181/bcmsdio/dhd_sdio.c
+CC ../code/src/wifi/ap6181/bcmsdio/pkt_lbuf.c
+CC ../code/src/wifi/ap6181/bcmsdio/bcmutils.c
+CC ../code/src/wifi/ap6181/bcmsdio/siutils.c
+CC ../code/src/wifi/ap6181/bcmsdio/wlu.c
+CC ../code/src/wifi/ap6181/bcmsdio/arch.c
+CC ../code/src/pmu/pmu.c
+CC ../code/src/pmu/pmui2c.c
+CC ../code/src/gps/minmea.c
+CC ../code/src/gps/gps.c
+CC ../code/src/sm/sm_chip_thk88.c
+CC ../code/src/btstack/src/ad_parser.c
+CC ../code/src/btstack/src/btstack_hid_parser.c
+CC ../code/src/btstack/src/btstack_linked_list.c
+CC ../code/src/btstack/src/btstack_memory.c
+CC ../code/src/btstack/src/btstack_memory_pool.c
+CC ../code/src/btstack/src/btstack_ring_buffer.c
+CC ../code/src/btstack/src/btstack_run_loop.c
+CC ../code/src/btstack/src/btstack_slip.c
+CC ../code/src/btstack/src/btstack_tlv.c
+CC ../code/src/btstack/src/btstack_util.c
+CC ../code/src/btstack/src/hci.c
+CC ../code/src/btstack/src/hci_cmd.c
+CC ../code/src/btstack/src/hci_dump.c
+CC ../code/src/btstack/src/hci_transport_em9304_spi.c
+CC ../code/src/btstack/src/hci_transport_h4.c
+CC ../code/src/btstack/src/hci_transport_h5.c
+CC ../code/src/btstack/src/l2cap.c
+CC ../code/src/btstack/src/l2cap_signaling.c
+CC ../code/src/btstack/src/classic/btstack_cvsd_plc.c
+CC ../code/src/btstack/src/classic/btstack_link_key_db_memory.c
+CC ../code/src/btstack/src/classic/btstack_link_key_db_static.c
+CC ../code/src/btstack/src/classic/btstack_link_key_db_tlv.c
+CC ../code/src/btstack/src/classic/btstack_sbc_decoder_bluedroid.c
+CC ../code/src/btstack/src/classic/btstack_sbc_encoder_bluedroid.c
+CC ../code/src/btstack/src/classic/btstack_sbc_plc.c
+CC ../code/src/btstack/src/classic/device_id_server.c
+CC ../code/src/btstack/src/classic/rfcomm.c
+CC ../code/src/btstack/src/classic/sdp_client.c
+CC ../code/src/btstack/src/classic/sdp_client_rfcomm.c
+CC ../code/src/btstack/src/classic/sdp_server.c
+CC ../code/src/btstack/src/classic/sdp_util.c
+CC ../code/src/btstack/src/classic/spp_server.c
+CC ../code/src/btstack/src/ble/ancs_client.c
+CC ../code/src/btstack/src/ble/att_db.c
+CC ../code/src/btstack/src/ble/att_db_util.c
+CC ../code/src/btstack/src/ble/att_dispatch.c
+CC ../code/src/btstack/src/ble/att_server.c
+CC ../code/src/btstack/src/ble/gatt_client.c
+CC ../code/src/btstack/src/ble/le_device_db_memory.c
+CC ../code/src/btstack/src/ble/le_device_db_tlv.c
+CC ../code/src/btstack/src/ble/sm.c
+
+E:\SourceCode\Sxxx\source\SxxxMonitor_Sec\project>BcmIamgeBuild bin\SxxxMonitor_Debug.bin bin\SxxxMonitor_Debug_raw.bin 40300000 
+
+E:\SourceCode\Sxxx\source\SxxxMonitor_Sec\project>copy bin\SxxxMonitor_Debug.bin bin\SxxxMonitor_Debug_20180408(v3.35).bin 
+已复制         1 个文件。
+
+E:\SourceCode\Sxxx\source\SxxxMonitor_Sec\project>objdump -d bin\SxxxMonitor_Debug_raw.elf  1>bin\asm1.txt 
+
+E:\SourceCode\Sxxx\source\SxxxMonitor_Sec\project>objdump -D bin\SxxxMonitor_Debug_raw.elf  1>bin\asm2.txt 
+
+E:\SourceCode\Sxxx\source\SxxxMonitor_Sec\project>objdump -t bin\SxxxMonitor_Debug_raw.elf  1>bin\sys.txt 
+
+E:\SourceCode\Sxxx\source\SxxxMonitor_Sec\project>pause
+请按任意键继续. . . 

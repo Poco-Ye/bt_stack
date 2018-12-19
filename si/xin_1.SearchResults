@@ -1,0 +1,13 @@
+---- numExt Matches (18 in 2 files) ----
+Btstack_slip.c (code\src\btstack\src):int numExt = 0;
+Btstack_slip.c (code\src\btstack\src):		gFrameSizeExt[numExt] = decoder_pos_ext;
+Btstack_slip.c (code\src\btstack\src):		log_debug("numExt:%d decoder_pos_ext:%d gFrameSizeExt[numExt]:%d",numExt, decoder_pos_ext, gFrameSizeExt[numExt]);
+Btstack_slip.c (code\src\btstack\src):		numExt++;
+Hci_transport_h5.c (code\src\btstack\src):extern int numExt;
+Hci_transport_h5.c (code\src\btstack\src):static int numExtt;
+Hci_transport_h5.c (code\src\btstack\src):	len = QueGets((T_Queue *)(&ptBtOpt->tMasterRecvQueTest), process_frame_ext, gFrameSizeExt[numExtt]);
+Hci_transport_h5.c (code\src\btstack\src):	PortRecvs(7, temp_buffer, gFrameSizeExt[numExtt], 10);
+Hci_transport_h5.c (code\src\btstack\src):	log_debug("11 process_frame_ext numExt:%d numExtt:%d size:%d size1:%d size2:%d size3:%d size4:%d size5:%d  len:%d", numExt, numExtt, gFrameSizeExt[0], gFrameSizeExt[1], gFrameSizeExt[2], gFrameSizeExt[3], gFrameSizeExt[4], gFrameSizeExt[5],len);
+Hci_transport_h5.c (code\src\btstack\src):	int       frame_size_without_header = gFrameSizeExt[numExtt] - 4;
+Hci_transport_h5.c (code\src\btstack\src):	numExtt++;
+Hci_transport_h5.c (code\src\btstack\src):			numExt++;
